@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Coolom Games</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome pel menú burger -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Estils -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <!-- Capçalera amb el logo i navegació -->
+    <header class="header">
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo-container fade-in-down">
+            <img src="img/LogoTopLeft.png" alt="Coolom Games Logo" class="logo"/>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#games">GAMES</a></li>
+                <li><a href="#aboutus">ABOUT US</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Secció principal amb el tràiler -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="trailer-container scale-in">
+                <div class="trailer-frame">
+                    <div id="trailerIframe"></div>
+                </div>
+                <div class="trailer-title fade-in-up">
+                    <h2 id="trailerTitle">Loading...</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secció dels jocs -->
+    <section id="games" class="games-section">
+        <h2 class="section-title fade-in-up">OUR GAMES</h2>
+        <div class="games-gallery" id="gamesGallery"></div>
+    </section>
+
+    <!-- Secció About Us -->
+    <section id="aboutus" class="about-section">
+        <h2 class="fade-in-up">ABOUT US</h2>
+        <div class="about-content">
+            <p class="fade-in-up">Coolom Games is a tiny indie dev company that focuses on creating the weirdest games possible, as quickly as possible. Our last videogame only took 2 years.</p>
+        </div>
+    </section>
+
+    <!-- Secció de l'equip -->
+    <section class="team-section">
+        <div class="team-wrapper" id="teamWrapper"></div>
+    </section>
+
+    <!-- Secció de contacte -->
+    <section id="contact" class="contact-section">
+        <div class="contact-background"></div>
+        <h2 class="section-title fade-in-up">CONTACT US</h2>
+        <div class="contact-form-wrapper scale-in">
+            <form action="#" class="contact-form fade-in-up">
+                <input type="text" name="name" placeholder="NAME" required>
+                <input type="email" name="email" placeholder="EMAIL" required>
+                <textarea name="message" placeholder="MESSAGE" required></textarea>
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Peu de pàgina -->
+    <footer class="footer fade-in-up">
+        <p>COOLOM GAMES ALL RIGHTS RESERVED</p>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@CoolomGames" target="_blank" rel="noopener noreferrer" class="icon-hover">
+                <img src="img/ImageYoutube.png" alt="YouTube"/>
+            </a>
+            <a href="mailto:coolomgames@gmail.com" class="icon-hover">
+                <img src="img/ImageEmail.png" alt="Email"/>
+            </a>
+            <a href="https://x.com/CoolomGames" target="_blank" rel="noopener noreferrer" class="icon-hover">
+                <img src="img/ImageTwitter.png" alt="Twitter"/>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts (no surten fins a la següent pràctica) -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

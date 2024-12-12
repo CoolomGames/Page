@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+}
+
+/* Estructura base de les seccions */
+section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estils dels títols */
+.section-title,
+.about-section h2,
+.contact-section h2 {
+    color: #00a8e8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Línies decoratives pels títols */
+.section-title:after,
+.section-title:before,
+.about-section h2:after,
+.about-section h2:before {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    width: 30%;
+    height: 2px;
+}
+
+.section-title:after,
+.about-section h2:after {
+    left: calc(100% + 20px);
+    background: linear-gradient(to right, currentColor 0%, transparent 100%);
+}
+
+.section-title:before,
+.about-section h2:before {
+    right: calc(100% + 20px);
+    background: linear-gradient(to left, currentColor 0%, transparent 100%);
+}
+
+/* Capçelera */
+.header {
+    background: #00a8e8;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* logo on top */
+.logo-container {
+    position: relative;
+    transform: scale(1.6);
+    margin-top: -40px;
+    z-index: 2;
+}
+
+.logo {
+    height: 160px;
+    width: auto;
+}
+
+/* Menú hamburguesa */
+.burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 240px;
+    background: #00a8e8;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-links.active {
+    display: block;
+}
+
+.nav-links li {
+    list-style: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Secció Hero amb efecte parallax */
+.hero {
+    min-height: 100vh;
+    background: url('../img/BackgroundTop.png') center/cover fixed no-repeat;
+    background-attachment: fixed;
+    padding: 120px 20px 80px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contenidor del tràiler */
+.trailer-container {
+    background: #00a8e8;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    margin: 40px auto 0;
+}
+
+.trailer-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+}
+
+#trailerIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.trailer-title {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.trailer-title h2 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Secció de jocs */
+.games-section {
+    padding: 4rem 2rem;
+    background: #fff;
+    position: relative;
+}
+
+.games-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.game-item:hover {
+    transform: translateY(-5px);
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.game-item:hover img {
+    transform: scale(1.05);
+}
+
+.game-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-title:hover {
+    background: rgba(0,0,0,1);
+}
+
+/* Seccions About */
+.about-section,
+.team-section {
+    background: #00a8e8;
+    color: white;
+    width: 100%;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.about-section h2 {
+    color: white;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Graella d'equip */
+.team-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.team-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* contact us amb fons parallax */
+.contact-section {
+    padding: 4rem 2rem;
+    position: relative;
+    width: 100%;
+    background: url('../img/BackgroundTop.png') center/cover fixed no-repeat;
+}
+
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.contact-form-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Formulari de contacte */
+.contact-form {
+    background: #00a8e8;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: white;
+    color: #00a8e8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+}
+
+/* Peu de pàgina amb xarxes */
+.footer {
+    background: #00a8e8;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* transicions gang */
+.fade-in-up { animation: fadeInUp 0.8s ease forwards; }
+.fade-in-down { animation: fadeInDown 0.8s ease forwards; }
+.scale-in { animation: scaleIn 0.8s ease forwards; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* coses pq el mobil funcioni */
+@media (max-width: 768px) {
+    section { padding: 2rem 1rem; }
+    
+    .section-title:after,
+    .section-title:before,
+    .about-section h2:after,
+    .about-section h2:before {
+        display: none;
+    }
+
+    .team-member a {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding-top: 140px;
+    }
+
+    .trailer-container {
+        width: 95%;
+    }
+}
