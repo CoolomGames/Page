@@ -57,37 +57,19 @@ const games = [
 // Informació de l'equip amb links a Instagram
 const teamMembers = [
     {
-        name: "MONTSE ESTIVILL",
+        name: "MONTSE",
         img: "img/AvatarMontse.png",
         description: "The mastermind behind everything.<br>Loves: Natalias<br>Hates: Chicken Nuggets",
         link: "https://www.instagram.com/m_estivill/"
     },
     {
-        name: "UNAI ESTAVILLO",
+        name: "UNAI",
         img: "img/AvatarUnai.png",
         description: "He has anxiety.<br>Loves: Chicken Nuggets<br>Hates: Anxiety",
         link: "https://www.instagram.com/unaiestavillo/"
     },
     {
-        name: "NÚRIA ANTONELL",
-        img: "img/AvatarNuria.png",
-        description: "The hand that draws.<br>Loves: Chicken Nuggets<br>Hates: Walking back from McDonalds",
-        link: "https://www.instagram.com/elfulldelanuria/"
-    },
-    {
-        name: "NÚRIA ANTONELL",
-        img: "img/AvatarNuria.png",
-        description: "The hand that draws.<br>Loves: Chicken Nuggets<br>Hates: Walking back from McDonalds",
-        link: "https://www.instagram.com/elfulldelanuria/"
-    },
-    {
-        name: "NÚRIA ANTONELL",
-        img: "img/AvatarNuria.png",
-        description: "The hand that draws.<br>Loves: Chicken Nuggets<br>Hates: Walking back from McDonalds",
-        link: "https://www.instagram.com/elfulldelanuria/"
-    },
-    {
-        name: "NÚRIA ANTONELL",
+        name: "NÚRIA",
         img: "img/AvatarNuria.png",
         description: "The hand that draws.<br>Loves: Chicken Nuggets<br>Hates: Walking back from McDonalds",
         link: "https://www.instagram.com/elfulldelanuria/"
