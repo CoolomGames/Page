@@ -33,24 +33,6 @@ const games = [
         img: "img/datingkillmulatorgamepicture.png",
         trailerId: "9PoZ8tg7u7o",
         link: "https://unaiestavillo.itch.io/datingkillmulator"
-    },
-    {
-        title: "Dating Killmulator",
-        img: "img/datingkillmulatorgamepicture.png",
-        trailerId: "9PoZ8tg7u7o",
-        link: "https://unaiestavillo.itch.io/datingkillmulator"
-    },
-    {
-        title: "Dating Killmulator",
-        img: "img/datingkillmulatorgamepicture.png",
-        trailerId: "9PoZ8tg7u7o",
-        link: "https://unaiestavillo.itch.io/datingkillmulator"
-    },
-    {
-        title: "Dating Killmulator",
-        img: "img/datingkillmulatorgamepicture.png",
-        trailerId: "9PoZ8tg7u7o",
-        link: "https://unaiestavillo.itch.io/datingkillmulator"
     }
 ];
 
